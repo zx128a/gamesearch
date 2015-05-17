@@ -1,0 +1,193 @@
+Base class result parser
+
+
+
+        results
+
+        filter - text "Dragon" , platform "Ps3" price etc.
+
+
+
+
+
+
+<div class="grid-box">
+
+    <div class="inner">
+
+
+        <div class="image">
+            <a href="https://www.pulsar.bg/18472-dragon-age:-origins-electronic-arts?search=dragon"><img src="http://www.pulsar.bg/image/cache/data/products/12306-180x180.jpg" title="Dragon Age: Origins" alt="Dragon Age: Origins" /></a>
+        </div>
+
+
+
+        <div class='name'><a href='https://www.pulsar.bg/18472-dragon-age:-origins-electronic-arts?search=dragon'>Dragon Age: Origins<font color='#878787'> | XBOX360</font></a></div>
+
+        <div class="description">
+            От създателите на Mass Effect™, Star Wars®: Knights of the Old Republic™ и Baldur’s Gate™ идва епи..</div>
+
+
+        <div class="price">
+
+            29,95лв.
+
+        </div>
+
+
+
+        <!-- PRE-ORDER MOD ORIGINAL START
+                                                                                        <div class="cart"><input type="button" value="Купи" onclick="addToCart('12306');" class="button" /></div>
+                                                PRE-ORDER MOD ORIGINAL END -->
+
+        <!-- PRE-ORDER MOD v2 START -->
+        <div class="cart"><input type="button" value="Купи" onclick="addToCart('12306');" class="button" /></div>
+        <!-- PRE-ORDER MOD v2 END -->
+
+        <div class="wishlist"><a onclick="addToWishList('12306');" class="tooltp" rel="tooltip" title="Добави в &quot;Желани&quot;"><i class="icon-heart"></i></a></div>
+
+        <div class="compare"><a onclick="addToCompare('12306');" class="tooltp" rel="tooltip" title="Добави за сравняване"><i class="icon-plus"></i></a></div>
+
+    </div>
+
+</div>
+
+
+
+<div class="inner">
+    <div class="onsale">
+        <div class="ribbon">ÐŸÑ€Ð¾Ð¼Ð¾Ñ†Ð¸Ñ</div>
+        <div class="ribbonshadow"></div> </div>
+        <div class="image">
+            <a href="https://www.pulsar.bg/20056-dragon-age-2-electronic-arts?search=dragon">
+                <img alt="Dragon Age 2" src="http://www.pulsar.bg/image/cache/data/products/13917-180x180.jpg" title="Dragon Age 2"></img>
+            </a>
+        </div>
+    <div class="name">
+        <a href="https://www.pulsar.bg/20056-dragon-age-2-electronic-arts?search=dragon">Dragon Age 2<font color="#878787"> | XBOX360</font></a></div> <div class="description">Dragon Age 2 Ð²Ð¸ Ð¿Ð¾ÑÑ‚Ð°Ð²Ñ Ð² Ñ€Ð¾Ð»ÑÑ‚Ð° Ð½Ð° Ð¥Ð¾Ðº â€“ Ð±ÐµÐ´ÐµÐ½ Ð¸Ð·Ð³Ð½Ð°Ð½Ð¸Ðº, ÐºÐ¾Ð¹Ñ‚Ð¾ ÑÐµ ÑÐ´Ð¾Ð±Ð¸Ð²Ð° Ñ Ð¼Ð¾Ð³ÑŠÑ‰ÐµÑÑ‚Ð²Ð¾, Ð·Ð° Ð´Ð° ÑÐµ Ð¿Ñ€..</div> <div class="price"> <span class="price-old">39,95Ð»Ð².</span> <span class="price-new">29,95Ð»Ð².</span> </div> <div class="cart"><input class="button" onclick="addToCart('13917');" type="button" value="ÐšÑƒÐ¿Ð¸"></input></div> <div class="wishlist"><a class="tooltp" onclick="addToWishList('13917');" rel="tooltip" title="Ð”Ð¾Ð±Ð°Ð²Ð¸ Ð² "Ð–ÐµÐ»Ð°Ð½Ð¸""><i class="icon-heart"></i></a></div> <div class="compare"><a class="tooltp" onclick="addToCompare('13917');" rel="tooltip" title="Ð”Ð¾Ð±Ð°Ð²Ð¸ Ð·Ð° ÑÑ€Ð°Ð²Ð½ÑÐ²Ð°Ð½Ðµ"><i class="icon-plus"></i></a></div> </div>
+
+
+
+
+
+
+<div class="product-box">
+<div class="box">
+    <figure>
+        <a href="/bg/Software/Software-ATARI-DRAGON-BALL-Z-SHIN-BUDOKAI/p/563871"><img src="/medias/sys_master/h20/h3e/8805285527582.jpg"  alt="" title=""/>
+        </a>
+    </figure>
+    <div class="text">
+        <h2><a href="/bg/Software/Software-ATARI-DRAGON-BALL-Z-SHIN-BUDOKAI/p/563871">Софтуер ATARI DRAGON BALL Z SHIN BUDOKAI</a></h2>
+
+        <p><strong>Код:</strong> 563871</p>
+        <ul>
+            <li title="">
+                СЪВМЕСТИМОСТ: PSP</li>
+            <li title="">
+                ЖАНР: ЕКШЪН</li>
+        </ul>
+        <div class="bottom">
+            <p class="comments">Коментари: <strong>(0)</strong></p>
+            <div class="rating">
+                <!-- Whole stars -->
+                <!-- half stars -->
+                <!-- empty stars (foreach, loops incl. 'end' value)-->
+                <div><span></span></div>
+                <div><span></span></div>
+                <div><span></span></div>
+                <div><span></span></div>
+                <div><span></span></div>
+            </div>
+
+            <div class="clearfix"></div>
+            <ul class="tools">
+                <li class="to-favorites"><a href="javascript:ACC.minifavourites.addFavouritesItem(563871);">Любими</a></li>
+                <li class="to-compare"><a href="javascript:ACC.comparison.addProductForComparison(563871);">Сравни</a></li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="prices">
+
+        <div class="price-holder two-prices">
+
+            <p class="new-price   "><span class="priceValue"><strong>19<span class="hidden">.</span><sup>90</sup></strong></span>
+                <small>лв.</small></p><div class="sep"></div>
+
+            <ul class="buttons">
+                <li>
+                    <form id="addToCartForm563871" class="add_to_cart_form" action="/bg/cart/add" method="post"><input type="hidden" name="productCodePost" value="563871"/>
+                        <input type="hidden" maxlength="3" size="1" id="qty" name="qty" class="qty" value="1">
+                        <!--  buy -->
+                        <button id="addToCartButton" type="submit" class="buy"  title="PURCHASABLE: true">
+                            Купи</button>
+                        <input type="hidden" name="CSRFToken" value="e5a0b7c1-c65d-4d31-bff3-41ea12490736" />
+                    </form><div class="hidden">
+                    <!-- Popup connect with operator -->
+                    <div id="window_connect_563871" class="inline-popup size-medium-second">
+                        <div class="title">Продуктът е изчерпан онлайн</div>
+                        <div class="close-popup">x</div>
+                        <div class="popup-connect popup-limited" id="popupProductConnectPanel">
+                            <figure>
+                                <figcaption>Софтуер ATARI DRAGON BALL Z SHIN BUDOKAI</figcaption>
+                                <img src="/medias/sys_master/h66/hdb/8805285396510.jpg" media-zoom="/medias/sys_master/h0d/hf1/8805285330974.jpg" alt="" title=""/>
+                            </figure>
+                            <div class="popup-text" id="popupLowInventoryConnectTextPanel">
+                                Поради ограничени количества, вашата поръчка не може да бъде изпълнена на този етап. Моля, попълнете вашето име и телефон/е-mail за връзка. Наш оператор ще се свърже с Вас.<form id="productConnectForm" name="productConnectForm" action="/bg/user/product-low-inventory-contact" method="post"><div id="globalMessages">
+                            </div>
+                                <fieldset>
+                                    <ol class="clearfix">
+                                        <li>
+                                            <label for="product_notify_name">Име: *</label>
+                                            <input type="text" name="name" id="product_notify_name" />
+                                        </li>
+                                        <li>
+                                            <label for="product_notify_email">E-mail: *</label>
+                                            <input type="text" name="email" id="product_notify_email" />
+                                        </li>
+                                        <li>
+                                            <label for="product_notify_telephone">Телефонен номер: *</label>
+                                            <input type="text" name="phone" id="product_notify_telephone" />
+                                        </li>
+                                        <li class="clearfix"></li>
+                                        <li class="full-width center">
+                                            <input type="hidden" name="productCode" value="563871"/>
+                                            <button type="submit" class="button">Изпрати</button>
+                                        </li>
+                                    </ol>
+                                </fieldset>
+                                <input type="hidden" name="CSRFToken" value="e5a0b7c1-c65d-4d31-bff3-41ea12490736" />
+                            </form><script type="text/javascript">
+                                function closeColorBox() {
+                                $.colorbox.close()
+                                }
+                            </script>
+                                <script type="text/javascript">
+                                    //color box for price change related funcitons
+                                    $(document).ready(function() {
+                                    $('#productConnectForm').ajaxForm({
+                                    success: successFormPost,
+                                    target: '#popupLowInventoryConnectTextPanel'
+                                    }
+                                    );
+                                    });
+
+                                    function successFormPost(){
+                                    closeColorBox();
+                                    }
+                                    //end color box for price change related funcitons
+                                </script></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <!--// Popup connect with operator  -->
+                </div>
+                </li>
+                <li><a href="/bg/Software/Software-ATARI-DRAGON-BALL-Z-SHIN-BUDOKAI/p/563871" class="more">Виж още</a></li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+</div>
