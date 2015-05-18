@@ -1,5 +1,25 @@
 <?php
 
+    require_once('./parsers/PulsarSearcher.php');
+    require_once('./parsers/TechnopolisSearcher.php');
+
+    $searcher = new TechnopolisSearcher();
+    $searcher->setSearchParams(null, null, null, "killzone");
+    $searcher->execute();
+    $searcher->printResults();
+
+    $searcher = new PulsarSearcher();
+    $searcher->setSearchParams(null, null, null, "killzone");
+    $searcher->execute();
+    $searcher->printResults();
+
+    //var_dump($searcher->getResults());
+
+
+
+
+
+    /*
     libxml_use_internal_errors(true);
 
     $dom = new DOMDocument('1.0', 'UTF-8');
@@ -54,4 +74,4 @@
 
         echo "<br><br>";
 
-    }
+    }*/

@@ -1,55 +1,45 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ivan
- * Date: 17.5.2015 г.
- * Time: 23:40 ч.
- */
+
+require_once('./parsers/BaseSearcher.php');
+require_once('./parsers/ISearcher.php');
+require_once('./models/SearchItem.php');
 
 class TechnopolisSearcher extends BaseSearcher implements ISearcher
 {
 
-    public function setSearchParams(
-        $type,
-        $sub_type,
-        $platform,
-        $search_string
-    )
+
+    public function setSearchParams($type, $sub_type, $platform, $search_string)
     {
-        // TODO: Implement setSearchParams() method.
+        $this->query = "http://www.technopolis.bg/bg/search?q=" . $search_string . "%3Arelevance%3Acategory%3AP11030301&text=dragon&pageselect=50";
     }
 
 
     public function execute()
     {
-        $dom->loadHTMLFile("http://www.pulsar.bg/index.php?route=product/isearch&search=dragon");
+        $this->dom->loadHTMLFile($this->query);
 
-        $xpath = new DomXpath($dom);
+        $xpath = new DomXpath($this->dom);
 
-        $games = $xpath->query('//*[@class="grid-box"]/div');
+        $games = $xpath->query('//*[@class="product-box"]/div');
 
         for ($gameIdx = 0; $gameIdx < $games->length; $gameIdx++)
         {
             $game_node = $games->item($gameIdx);
 
-            $image = $xpath->query('.//div[@class="image"]//img', $game_node)->item(0);
-            $description = $xpath->query('.//div[@class="description"]', $game_node)->item(0)->textContent;
-            $price = $xpath->query('.//div[@class="price"]', $game_node)->item(0)->textContent;
+            $img = $xpath->query('./figure//img', $game_node)->item(0);
+            $src_attribute = $img->attributes->getNamedItem("src");
+            $img_url = "http://www.technopolis.bg" . $src_attribute->textContent;
+            $src_attribute->nodeValue = $img_url;
 
-            echo '<div class="result_row">';
-            echo $image->C14N(TRUE);
-            echo $description;
-            echo $price;
+            $search_item = new SearchItem();
 
-            echo '</div>';
+            $search_item->image_url = $img;
+            $search_item->description = $xpath->query('./div[@class="text"]//a', $game_node)->item(0)->textContent;
+            $search_item->price = $xpath->query('.//p[@class="new-price   "]', $game_node)->item(0)->textContent;
+
+            array_push($this->results, $search_item);
         }
-
-        // TODO: Implement execute() method.
     }
 
 
-    public function getResults()
-    {
-        // TODO: Implement getResults() method.
-    }
 }
