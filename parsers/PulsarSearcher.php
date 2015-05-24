@@ -2,7 +2,7 @@
 
 require_once('./parsers/BaseSearcher.php');
 require_once('./parsers/ISearcher.php');
-require_once('./models/SearchItem.php');
+require_once('./models/M_SearchResult.php');
 
 class PulsarSearcher extends BaseSearcher implements ISearcher
 {
@@ -27,9 +27,10 @@ class PulsarSearcher extends BaseSearcher implements ISearcher
             echo $gameIdx;
             $game_node = $games->item($gameIdx);
 
-            $search_item = new SearchItem();
+            $search_item = new M_SearchResult();
 
-            $search_item->image_url = $xpath->query('.//div[@class="image"]//img', $game_node)->item(0);
+            $search_item->image_url = $xpath->query('.//div[@class="image"]//img', $game_node)->
+                    item(0)->attributes->getNamedItem("src")->textContent;
             $search_item->description = $xpath->query('.//div[@class="description"]', $game_node)->item(0)->textContent;
             $search_item->price = $xpath->query('.//div[@class="price"]', $game_node)->item(0)->textContent;
 

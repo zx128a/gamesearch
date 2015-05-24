@@ -1,7 +1,7 @@
 <?php
 
 
-    class SearchItem
+    class M_SearchResult
     {
         var $image_url;
         var $description;

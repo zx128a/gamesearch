@@ -11,7 +11,7 @@ class BaseSearcher
     protected $results;
 
 
-    public function BaseSearcher()
+    public function __construct()
     {
         libxml_use_internal_errors(true);
 
@@ -19,7 +19,6 @@ class BaseSearcher
         $this->dom->substituteEntities = TRUE;
 
         $this->results = array();
-
     }
 
 

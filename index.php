@@ -2,76 +2,43 @@
 
     require_once('./parsers/PulsarSearcher.php');
     require_once('./parsers/TechnopolisSearcher.php');
+    require_once('./views/components/V_SearchResult.php');
 
-    $searcher = new TechnopolisSearcher();
-    $searcher->setSearchParams(null, null, null, "killzone");
-    $searcher->execute();
-    $searcher->printResults();
+    $searchers = array(
+        //new TechnopolisSearcher(),
+        new PulsarSearcher()
+    );
 
-    $searcher = new PulsarSearcher();
-    $searcher->setSearchParams(null, null, null, "killzone");
-    $searcher->execute();
-    $searcher->printResults();
+    $all_results = array();
 
-    //var_dump($searcher->getResults());
+    $game_name = "assassin";
 
-
-
-
-
-    /*
-    libxml_use_internal_errors(true);
-
-    $dom = new DOMDocument('1.0', 'UTF-8');
-    $dom->substituteEntities = TRUE;
-
-    $dom->loadHTMLFile("http://www.pulsar.bg/index.php?route=product/isearch&search=dragon");
-
-    $xpath = new DomXpath($dom);
-
-    $games = $xpath->query('//*[@class="grid-box"]/div');
-
-    for ($gameIdx = 0; $gameIdx < $games->length; $gameIdx++)
+    foreach ($searchers as $searcher)
     {
-        $game_node = $games->item($gameIdx);
+        $searcher->setSearchParams(null, null, null, $game_name);
+        $searcher->execute();
+        $all_results = array_merge($all_results, $searcher->getResults());
+    }
 
-        $image = $xpath->query('.//div[@class="image"]//img', $game_node)->item(0);
-        $description = $xpath->query('.//div[@class="description"]', $game_node)->item(0)->textContent;
-        $price = $xpath->query('.//div[@class="price"]', $game_node)->item(0)->textContent;
 
-        echo '<div class="result_row">';
-            echo $image->C14N(TRUE);
-            echo $description;
-            echo $price;
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Page Title</title>
+        </head>
+        <body>
+        </body>
+    </html>
 
-        echo '</div>';
+
+    foreach ($all_results as $result)
+    {
+        $v_search_res = new V_SearchResult($result);
+        $v_search_res->create();
     }
 
 
 
-    $dom = new DOMDocument('1.0', 'UTF-8');
-    $dom->substituteEntities = TRUE;
 
-    $dom->loadHTMLFile("http://www.technopolis.bg/bg/search?q=dragon%3Arelevance%3Acategory%3AP11030301&text=dragon&pageselect=50");
 
-    $xpath = new DomXpath($dom);
 
-    $games = $xpath->query('//*[@class="product-box"]/div');
-    //echo $games->item(0)->C14N(TRUE);
-
-    for ($gameIdx = 0; $gameIdx < $games->length; $gameIdx++)
-    {
-        $game_node = $games->item($gameIdx);
-
-        $img = $xpath->query('./figure//img', $game_node)->item(0);
-        $src_attribute = $img->attributes->getNamedItem("src");
-        $img_url = "http://www.technopolis.bg" . $src_attribute->textContent;
-        $src_attribute->nodeValue = $img_url;
-
-        echo $img->C14N(TRUE);
-        echo $text = $xpath->query('./div[@class="text"]//a', $game_node)->item(0)->textContent;
-        echo $xpath->query('.//p[@class="new-price   "]', $game_node)->item(0)->textContent;
-
-        echo "<br><br>";
-
-    }*/

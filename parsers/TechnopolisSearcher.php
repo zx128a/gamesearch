@@ -2,7 +2,7 @@
 
 require_once('./parsers/BaseSearcher.php');
 require_once('./parsers/ISearcher.php');
-require_once('./models/SearchItem.php');
+require_once('./models/M_SearchResult.php');
 
 class TechnopolisSearcher extends BaseSearcher implements ISearcher
 {
@@ -29,16 +29,18 @@ class TechnopolisSearcher extends BaseSearcher implements ISearcher
             $img = $xpath->query('./figure//img', $game_node)->item(0);
             $src_attribute = $img->attributes->getNamedItem("src");
             $img_url = "http://www.technopolis.bg" . $src_attribute->textContent;
-            $src_attribute->nodeValue = $img_url;
+            //$src_attribute->nodeValue = $img_url;
 
-            $search_item = new SearchItem();
+            $search_item = new M_SearchResult();
 
-            $search_item->image_url = $img;
+            $search_item->image_url = $img_url;
             $search_item->description = $xpath->query('./div[@class="text"]//a', $game_node)->item(0)->textContent;
             $search_item->price = $xpath->query('.//p[@class="new-price   "]', $game_node)->item(0)->textContent;
 
             array_push($this->results, $search_item);
         }
+
+
     }
 
 
