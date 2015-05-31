@@ -1,0 +1,29 @@
+.result_cell
+{
+    height:100px;
+    background-color: palevioletred;
+}
+
+.result_img
+{
+    width:200px;
+    height:200px;
+}
+
+.result_desc
+{
+    width:300px;
+    height:200px;
+}
+
+.result_price
+{
+    width:150px;
+    height:200px;
+}
+
+
+body
+{
+    background-color: lightblue;
+}

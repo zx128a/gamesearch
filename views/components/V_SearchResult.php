@@ -20,9 +20,13 @@ class V_SearchResult extends V_Comp
 
     public function create()
     {
-        echo '<img src="' . $this->result->image_url . '" class = "result_image"></img>';
-        echo $this->result->description;
-        echo $this->result->price;
+        echo '<div class = "result_cell">';
+
+            echo '<div class = "result_img"><img src="' . $this->result->image_url . '"></div>';
+            echo '<div clsss = "result_desc">' . $this->result->description . '</div>';
+            echo '<div clsss = "result_price">' . $this->result->price . '</div>';
+
+        echo '</div>';
 
         echo "<br><br>";
     }

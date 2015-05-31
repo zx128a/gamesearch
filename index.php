@@ -21,14 +21,16 @@
     }
 
 
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <title>Page Title</title>
-        </head>
-        <body>
-        </body>
-    </html>
+    echo <<<HTML
+        <!DOCTYPE html>
+            <html>
+                <head>
+                    <title>Търсачка за игри</title>
+                    <link rel="stylesheet" type="text/css" href="mystyle.css">
+                </head>
+                <body>
+HTML;
+
 
 
     foreach ($all_results as $result)
@@ -38,7 +40,7 @@
     }
 
 
-
-
-
-
+    echo <<<HTML
+            </body>
+        </html>
+HTML;

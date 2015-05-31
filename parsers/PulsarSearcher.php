@@ -24,7 +24,6 @@ class PulsarSearcher extends BaseSearcher implements ISearcher
 
         for ($gameIdx = 0; $gameIdx < $games->length; $gameIdx++)
         {
-            echo $gameIdx;
             $game_node = $games->item($gameIdx);
 
             $search_item = new M_SearchResult();
