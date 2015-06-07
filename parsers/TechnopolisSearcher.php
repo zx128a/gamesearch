@@ -36,6 +36,7 @@ class TechnopolisSearcher extends BaseSearcher implements ISearcher
             $search_item->image_url = $img_url;
             $search_item->description = $xpath->query('./div[@class="text"]//a', $game_node)->item(0)->textContent;
             $search_item->price = $xpath->query('.//p[@class="new-price   "]', $game_node)->item(0)->textContent;
+            $search_item->vendor_logo = "http://www.technopolis.bg/medias/sys_master/images/h70/h6c/8843421057054.png";
 
             array_push($this->results, $search_item);
         }

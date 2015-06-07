@@ -1,29 +1,91 @@
-.result_cell
+p
 {
-    height:100px;
-    background-color: palevioletred;
-}
-
-.result_img
-{
-    width:200px;
-    height:200px;
-}
-
-.result_desc
-{
-    width:300px;
-    height:200px;
-}
-
-.result_price
-{
-    width:150px;
-    height:200px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 
 body
 {
-    background-color: lightblue;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background-color: #c9d6e6;
+    width: 100%;
+    height: 100%;
 }
+
+
+.menu
+{
+    position: fixed;
+    top: 200;
+    left: 0;
+    width: 200px;
+    height: 600px;
+    background-color: #dbffd3;
+}
+
+
+.results
+{
+    width:600px;
+    margin: 20px auto;
+
+}
+
+
+    .result_cell
+    {
+        display: table;
+        position: relative;
+        background-color: #ffffff;
+        width:650px;
+        height:120px;
+        margin: 10px;
+    }
+
+
+        .result_img
+        {
+            position: absolute;
+            width:200px;
+            height:90%;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+
+        .result_img > img
+        {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+
+        .result_desc
+        {
+            display: table-cell;
+            vertical-align: middle;
+
+            left: 200px;
+            width:300px;
+        }
+
+
+        .result_price
+        {
+            position: absolute;
+            font-size: 20px;
+            left:500px;
+            width:150px;
+            max-height: 100%;
+            text-align: center;
+        }
+
+
+        .result_price > img
+        {
+            max-height: 50px;
+            max-width: 130px;
+        }
+

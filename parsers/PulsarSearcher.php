@@ -32,6 +32,7 @@ class PulsarSearcher extends BaseSearcher implements ISearcher
                     item(0)->attributes->getNamedItem("src")->textContent;
             $search_item->description = $xpath->query('.//div[@class="description"]', $game_node)->item(0)->textContent;
             $search_item->price = $xpath->query('.//div[@class="price"]', $game_node)->item(0)->textContent;
+            $search_item->vendor_logo = "http://www.pulsar.bg/image/data/Pulsar-Online-Logo-%5Bl160x100%5D.png";
 
             array_push($this->results, $search_item);
         }

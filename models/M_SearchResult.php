@@ -8,5 +8,6 @@
         var $name;
         var $price;
         var $platform;
+        var $vendor_logo;
     }
 
